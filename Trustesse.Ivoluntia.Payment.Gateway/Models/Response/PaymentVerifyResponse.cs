@@ -1,8 +1,8 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Trustesse.Ivoluntia.Payment.Gateway.Response
+namespace Trustesse.Ivoluntia.Payment.Gateway.Models.Response
 {
-    public class VerifyResponse
+    public class PaymentVerifyResponse
     {
         public bool Status { get; set; }
         public string Message { get; set; }

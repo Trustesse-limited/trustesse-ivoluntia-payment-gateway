@@ -3,21 +3,19 @@ using System.Collections.Generic;
 using System.Reflection.Emit;
 using Trustesse.Ivoluntia.Payment.Gateway.Models;
 
-namespace Trustesse.Ivoluntia.Payment.Gateway.Context
+namespace Trustesse.Ivoluntia.Payment.Gateway.Data.Context
 {
-    public class PaymentDataContext: DbContext
+    public class PaymentDataContext : DbContext
     {
         public PaymentDataContext(DbContextOptions<PaymentDataContext> Options) : base(Options)
         {
         }
-
         public DbSet<PaymentRequestEntity> PaymentRequests { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<PaymentRequestEntity>().HasData(
+            modelBuilder.Entity<PaymentRequestEntity>().HasData
+            (
                 new PaymentRequestEntity
                 {
                     PaymentRequestId = "pay001",
@@ -27,7 +25,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Context
                     Status = "initialize",
                     DateCreated = DateTime.UtcNow,
                     DateUpdated = DateTime.UtcNow,
-                    ServiceProvider = "Paystack",
+                    ServiceProvider = "paystack",
                     ProgramId = "prog01",
                     ProgramType = "Scholarship",
                     ServiceProviderReference = "psrefabc123"
@@ -46,7 +44,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Context
                     ProgramType = "Donation",
                     ServiceProviderReference = "fwrefdef456"
                 }
-                );
+            );
         }
     }
 }

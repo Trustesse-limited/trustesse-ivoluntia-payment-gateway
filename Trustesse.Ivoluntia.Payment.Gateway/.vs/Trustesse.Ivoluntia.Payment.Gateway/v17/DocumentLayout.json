@@ -3,60 +3,88 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\service\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:service\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\repository\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:repository\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\context\\paymentdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:context\\paymentdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\service\\interface\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:service\\interface\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\service\\interface\\ipaymentgatewayfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:service\\interface\\ipaymentgatewayfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\irepository\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:irepository\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\service\\interface\\ipaymentgateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:service\\interface\\ipaymentgateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\iservice\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:iservice\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\service\\implementation\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:service\\implementation\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\service\\implementation\\paystackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:service\\implementation\\paystackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\service\\implementation\\paymentgatewayfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:service\\implementation\\paymentgatewayfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\service\\implementation\\flutterwaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:service\\implementation\\flutterwaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\repository\\interface\\ipaymentrequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:repository\\interface\\ipaymentrequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\repository\\implementation\\paymentrequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:repository\\implementation\\paymentrequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\models\\paymentrequestentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:models\\paymentrequestentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\request\\initializerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:request\\initializerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\models\\response\\paymentinitializeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:models\\response\\paymentinitializeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\response\\initializeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:response\\initializeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\models\\response\\paymentverifyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:models\\response\\paymentverifyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\response\\responsetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:response\\responsetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\models\\response\\responsetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:models\\response\\responsetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\response\\verifyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:response\\verifyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\controllers\\v1\\paystacktransactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:controllers\\v1\\paystacktransactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\data\\enums\\paymentserviceprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:data\\enums\\paymentserviceprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\data\\context\\paymentdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:data\\context\\paymentdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\models\\dto\\paymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:models\\dto\\paymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\models\\request\\paymentinitializerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:models\\request\\paymentinitializerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{646F6BE9-AD45-48E4-8C45-F23DD1042938}|Trustesse.Ivoluntia.Payment.Gateway.csproj|c:\\users\\hp\\documents\\trustesse-ivoluntia-payment-gateway\\trustesse.ivoluntia.payment.gateway\\trustesse.ivoluntia.payment.gateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -74,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,52 +130,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PaymentDataContext.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Context\\PaymentDataContext.cs",
-              "RelativeDocumentMoniker": "Context\\PaymentDataContext.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Context\\PaymentDataContext.cs",
-              "RelativeToolTip": "Context\\PaymentDataContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "TransactionService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Implementation\\TransactionService.cs",
+              "RelativeDocumentMoniker": "Service\\Implementation\\TransactionService.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Implementation\\TransactionService.cs",
+              "RelativeToolTip": "Service\\Implementation\\TransactionService.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T22:28:44.155Z",
+              "WhenOpened": "2025-08-29T16:31:29.85Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PaymentService.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\PaymentService.cs",
-              "RelativeDocumentMoniker": "Service\\PaymentService.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\PaymentService.cs",
-              "RelativeToolTip": "Service\\PaymentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "IPaymentGateway.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Interface\\IPaymentGateway.cs",
+              "RelativeDocumentMoniker": "Service\\Interface\\IPaymentGateway.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Interface\\IPaymentGateway.cs",
+              "RelativeToolTip": "Service\\Interface\\IPaymentGateway.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T22:46:58.227Z",
+              "WhenOpened": "2025-08-29T16:45:42.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IPaymentGatewayFactory.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Interface\\IPaymentGatewayFactory.cs",
+              "RelativeDocumentMoniker": "Service\\Interface\\IPaymentGatewayFactory.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Interface\\IPaymentGatewayFactory.cs",
+              "RelativeToolTip": "Service\\Interface\\IPaymentGatewayFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T19:31:09.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T22:37:47.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IPaymentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\IRepository\\IPaymentRepository.cs",
-              "RelativeDocumentMoniker": "IRepository\\IPaymentRepository.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\IRepository\\IPaymentRepository.cs",
-              "RelativeToolTip": "IRepository\\IPaymentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ITransactionService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Interface\\ITransactionService.cs",
+              "RelativeDocumentMoniker": "Service\\Interface\\ITransactionService.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Interface\\ITransactionService.cs",
+              "RelativeToolTip": "Service\\Interface\\ITransactionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-23T18:52:18.094Z",
               "EditorCaption": ""
@@ -155,115 +183,128 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PaymentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Repository\\PaymentRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\PaymentRepository.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Repository\\PaymentRepository.cs",
-              "RelativeToolTip": "Repository\\PaymentRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T18:51:51.845Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-22T22:40:10.715Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T22:24:44.531Z",
+              "WhenOpened": "2025-08-22T22:37:47.114Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Controllers\\PaymentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Controllers\\PaymentController.cs",
-              "RelativeToolTip": "Controllers\\PaymentController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "PaystackService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Implementation\\PaystackService.cs",
+              "RelativeDocumentMoniker": "Service\\Implementation\\PaystackService.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Implementation\\PaystackService.cs",
+              "RelativeToolTip": "Service\\Implementation\\PaystackService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T22:51:57.036Z",
+              "WhenOpened": "2025-08-29T16:38:34.102Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IPaymentService.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\IService\\IPaymentService.cs",
-              "RelativeDocumentMoniker": "IService\\IPaymentService.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\IService\\IPaymentService.cs",
-              "RelativeToolTip": "IService\\IPaymentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "PaymentGatewayFactory.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Implementation\\PaymentGatewayFactory.cs",
+              "RelativeDocumentMoniker": "Service\\Implementation\\PaymentGatewayFactory.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Implementation\\PaymentGatewayFactory.cs",
+              "RelativeToolTip": "Service\\Implementation\\PaymentGatewayFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T22:49:32.344Z",
+              "WhenOpened": "2025-08-30T19:32:48.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "FlutterwaveService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Implementation\\FlutterwaveService.cs",
+              "RelativeDocumentMoniker": "Service\\Implementation\\FlutterwaveService.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Service\\Implementation\\FlutterwaveService.cs",
+              "RelativeToolTip": "Service\\Implementation\\FlutterwaveService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T19:49:32.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IPaymentRequestRepository.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Repository\\Interface\\IPaymentRequestRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Interface\\IPaymentRequestRepository.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Repository\\Interface\\IPaymentRequestRepository.cs",
+              "RelativeToolTip": "Repository\\Interface\\IPaymentRequestRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T20:47:13.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PaymentRequestRepository.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Repository\\Implementation\\PaymentRequestRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Implementation\\PaymentRequestRepository.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Repository\\Implementation\\PaymentRequestRepository.cs",
+              "RelativeToolTip": "Repository\\Implementation\\PaymentRequestRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T20:46:26.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "PaymentRequestEntity.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Models\\PaymentRequestEntity.cs",
               "RelativeDocumentMoniker": "Models\\PaymentRequestEntity.cs",
               "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Models\\PaymentRequestEntity.cs",
               "RelativeToolTip": "Models\\PaymentRequestEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T22:35:29.08Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "InitializeRequest.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Request\\InitializeRequest.cs",
-              "RelativeDocumentMoniker": "Request\\InitializeRequest.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Request\\InitializeRequest.cs",
-              "RelativeToolTip": "Request\\InitializeRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T22:43:44.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "InitializeResponse.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Response\\InitializeResponse.cs",
-              "RelativeDocumentMoniker": "Response\\InitializeResponse.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Response\\InitializeResponse.cs",
-              "RelativeToolTip": "Response\\InitializeResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "PaymentInitializeResponse.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Models\\Response\\PaymentInitializeResponse.cs",
+              "RelativeDocumentMoniker": "Models\\Response\\PaymentInitializeResponse.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Models\\Response\\PaymentInitializeResponse.cs",
+              "RelativeToolTip": "Models\\Response\\PaymentInitializeResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T22:44:30.55Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ResponseType.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Response\\ResponseType.cs",
-              "RelativeDocumentMoniker": "Response\\ResponseType.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Response\\ResponseType.cs",
-              "RelativeToolTip": "Response\\ResponseType.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T20:36:13.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "VerifyResponse.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Response\\VerifyResponse.cs",
-              "RelativeDocumentMoniker": "Response\\VerifyResponse.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Response\\VerifyResponse.cs",
-              "RelativeToolTip": "Response\\VerifyResponse.cs",
+              "DocumentIndex": 13,
+              "Title": "PaymentVerifyResponse.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Models\\Response\\PaymentVerifyResponse.cs",
+              "RelativeDocumentMoniker": "Models\\Response\\PaymentVerifyResponse.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Models\\Response\\PaymentVerifyResponse.cs",
+              "RelativeToolTip": "Models\\Response\\PaymentVerifyResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T22:45:25.234Z",
@@ -271,32 +312,109 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAACdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-22T22:40:10.715Z",
+              "DocumentIndex": 14,
+              "Title": "ResponseType.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Models\\Response\\ResponseType.cs",
+              "RelativeDocumentMoniker": "Models\\Response\\ResponseType.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Models\\Response\\ResponseType.cs",
+              "RelativeToolTip": "Models\\Response\\ResponseType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T20:36:13.136Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
+              "Title": "PaystackTransactionController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Controllers\\V1\\PaystackTransactionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\V1\\PaystackTransactionController.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Controllers\\V1\\PaystackTransactionController.cs",
+              "RelativeToolTip": "Controllers\\V1\\PaystackTransactionController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T22:51:57.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PaymentServiceProvider.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Data\\Enums\\PaymentServiceProvider.cs",
+              "RelativeDocumentMoniker": "Data\\Enums\\PaymentServiceProvider.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Data\\Enums\\PaymentServiceProvider.cs",
+              "RelativeToolTip": "Data\\Enums\\PaymentServiceProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T19:37:48.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PaymentDataContext.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Data\\Context\\PaymentDataContext.cs",
+              "RelativeDocumentMoniker": "Data\\Context\\PaymentDataContext.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Data\\Context\\PaymentDataContext.cs",
+              "RelativeToolTip": "Data\\Context\\PaymentDataContext.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T22:28:44.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PaymentRequest.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Models\\DTO\\PaymentRequest.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\PaymentRequest.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Models\\DTO\\PaymentRequest.cs",
+              "RelativeToolTip": "Models\\DTO\\PaymentRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T21:17:59.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PaymentInitializeRequest.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Models\\Request\\PaymentInitializeRequest.cs",
+              "RelativeDocumentMoniker": "Models\\Request\\PaymentInitializeRequest.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Models\\Request\\PaymentInitializeRequest.cs",
+              "RelativeToolTip": "Models\\Request\\PaymentInitializeRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T22:43:44.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T22:24:44.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "Trustesse.Ivoluntia.Payment.Gateway.csproj",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Trustesse.Ivoluntia.Payment.Gateway.csproj",
               "RelativeDocumentMoniker": "Trustesse.Ivoluntia.Payment.Gateway.csproj",
               "ToolTip": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Trustesse.Ivoluntia.Payment.Gateway.csproj",
               "RelativeToolTip": "Trustesse.Ivoluntia.Payment.Gateway.csproj",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-22T22:26:04.631Z"
+              "WhenOpened": "2025-08-30T19:30:42.638Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "20250822233504_MigrationPayment.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\trustesse-ivoluntia-payment-gateway\\Trustesse.Ivoluntia.Payment.Gateway\\Migrations\\20250822233504_MigrationPayment.cs",
               "RelativeDocumentMoniker": "Migrations\\20250822233504_MigrationPayment.cs",

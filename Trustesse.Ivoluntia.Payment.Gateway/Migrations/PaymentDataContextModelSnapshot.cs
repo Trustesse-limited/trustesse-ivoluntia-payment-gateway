@@ -3,7 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Trustesse.Ivoluntia.Payment.Gateway.Context;
+using Trustesse.Ivoluntia.Payment.Gateway.Data.Context;
 
 #nullable disable
 

@@ -1,30 +1,27 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Trustesse.Ivoluntia.Payment.Gateway.IService;
-using Trustesse.Ivoluntia.Payment.Gateway.Request;
-using Trustesse.Ivoluntia.Payment.Gateway.Response;
+﻿using Microsoft.AspNetCore.Mvc;
+using Trustesse.Ivoluntia.Payment.Gateway.Service.Interface;
 
-namespace Trustesse.Ivoluntia.Payment.Gateway.Controllers
+namespace Trustesse.Ivoluntia.Payment.Gateway.Controllers.V1
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PaymentController : ControllerBase
+    public class PaystackTransactionController : ControllerBase
     {
-        private readonly IPaymentService _service;
-        private readonly ILogger<PaymentController> _logger;
-        public PaymentController(IPaymentService service, ILogger<PaymentController> logger)
+        private readonly ITransactionService _service;
+        private readonly ILogger<PaystackTransactionController> _logger;
+
+        public PaystackTransactionController(ITransactionService service, ILogger<PaystackTransactionController> logger)
         {
             _service = service;
             _logger = logger;
         }
-
         [HttpPost("initialize")]
         public async Task<IActionResult> Initialize(string paymentRequestID)
         {
             var response = await _service.InitializeTransaction(paymentRequestID);
             try
             {
-                if (response.Data.Message == "Authorization URL created")
+                if (response.Succeeded)
                 {
                     return Ok($"authrizationUrl:{response.Data.Data.AuthorizationUrl}, accesscode:{response.Data.Data.AccessCode}");
                 }
@@ -36,16 +33,13 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-
         [HttpGet("verify")]
         public async Task<IActionResult> Verify(string reference)
         {
-
             var response = await _service.VerifyTransaction(reference);
             try
             {
-                if (response.Data.Data.Status == "success")
+                if (response.Succeeded)
                 {
                     return Ok(response);
                 }
@@ -57,6 +51,5 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
     }
 }

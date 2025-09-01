@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace Trustesse.Ivoluntia.Payment.Gateway.Request
+namespace Trustesse.Ivoluntia.Payment.Gateway.Models.Request
 {
-    public class InitializeRequest
+    public class PaymentInitializeRequest
     {
-        //public string Reference { get; set; }
         [Required]
         [JsonPropertyName("amount")]
         public string Amount { get; set; }
@@ -13,8 +12,6 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Request
         [JsonPropertyName("email")]
         public string Email { get; set; }
         [JsonPropertyName("callback_url")]
-        public string CallbackUrl { get; set; }// pass this to the appsetting call it for
-        [JsonPropertyName("reference")]
-        public string TransactionReference { get; set; }
+        public string CallbackUrl { get; set; }
     }
 }
