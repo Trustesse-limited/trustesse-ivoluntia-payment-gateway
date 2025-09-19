@@ -14,7 +14,8 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
         private readonly string? _apiKey;
         private readonly string? _callBack;
         private readonly string? _baseAddress;
-        public PaystackService(IConfiguration configuration, HttpClient client)
+        private readonly IWebhookService _iwebhookService;
+        public PaystackService(IConfiguration configuration, HttpClient client, IWebhookService iwebhookService)
         {
             _configuration = configuration;
             _apiKey = _configuration["Paystack:SecretKey"];
@@ -28,6 +29,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
             };
             _client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _apiKey);
             _client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            _iwebhookService = iwebhookService;
         }
         public async Task<ResponseType<PaymentInitializeResponse>> Initialize(PaymentRequest paymentRequest)
         {
@@ -45,7 +47,6 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
                 return ResponseType<PaymentInitializeResponse>.Success(initialResponse.Message, initialResponse, 200);
             }
             return ResponseType<PaymentInitializeResponse>.Fail(initialResponse.Message);
-
         }
         public async Task<ResponseType<PaymentVerifyResponse>> VerifyTransaction(string reference)
         {
@@ -57,6 +58,15 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
                 return ResponseType<PaymentVerifyResponse>.Success(verifyReponse.Message, verifyReponse, 200);
             }
             return ResponseType<PaymentVerifyResponse>.Fail(verifyReponse.Message);
+        }
+        public async Task<ResponseType<WebhookEventData>> Webhook(string jsonBody, string header, WebhookEventData body)
+        {
+            var response = await _iwebhookService.Webhook(jsonBody, header, body);
+            if (response.Succeeded)
+            {
+                return ResponseType<WebhookEventData>.Success(response.Message, response.Data, 200);
+            }
+            return ResponseType<WebhookEventData>.Fail(response.Message);
         }
     }
 }
