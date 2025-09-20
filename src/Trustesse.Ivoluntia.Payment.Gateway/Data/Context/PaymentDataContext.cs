@@ -39,7 +39,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Data.Context
                     Status = "initialize",
                     DateCreated = DateTime.UtcNow,
                     DateUpdated = DateTime.UtcNow,
-                    ServiceProvider = "Paystack",
+                    ServiceProvider = "paystack",
                     ProgramId = "prog02",
                     ProgramType = "Donation",
                     ServiceProviderReference = "fwrefdef456"
