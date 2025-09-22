@@ -21,13 +21,13 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore Trustesse.Ivoluntia.Payment.Gateway.sln
-      working-directory: Trustesse.Ivoluntia.Payment.Gateway
+      working-directory: src/Trustesse.Ivoluntia.Payment.Gateway
 
     - name: Build
       run: dotnet build Trustesse.Ivoluntia.Payment.Gateway.sln --no-restore
-      working-directory: Trustesse.Ivoluntia.Payment.Gateway
+      working-directory: src/Trustesse.Ivoluntia.Payment.Gateway
 
     - name: Test
       run: dotnet test Trustesse.Ivoluntia.Payment.Gateway.sln --no-build --verbosity normal
-      working-directory: Trustesse.Ivoluntia.Payment.Gateway
+      working-directory: src/Trustesse.Ivoluntia.Payment.Gateway
       

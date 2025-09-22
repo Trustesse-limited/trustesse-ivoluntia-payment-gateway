@@ -29,5 +29,13 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Repository.Implementation
             var response = await _paymentDataContext.SaveChangesAsync();
             return true;   
         }
+        public async Task<bool> UpdatePaymentRequestByReference(string reference)
+        {
+            var contextResponse = await _paymentDataContext.PaymentRequests.Where(x => x.ServiceProviderReference == reference).FirstOrDefaultAsync();
+            contextResponse.Status = "success";
+            _paymentDataContext.PaymentRequests.Update(contextResponse);
+            var response = await _paymentDataContext.SaveChangesAsync();
+            return true;
+        }
     }
 }

@@ -22,6 +22,8 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 builder.Services.AddLogging();
+builder.Services.AddScoped<IVerifyWebhookEvent, VerifyWebhookEvent>();
+builder.Services.AddScoped<IWebhookService, WebhookService>();
 builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddScoped<PaystackService>();
 builder.Services.AddScoped<FlutterwaveService>();

@@ -1,4 +1,5 @@
 ﻿using Trustesse.Ivoluntia.Payment.Gateway.Models.DTO;
+using Trustesse.Ivoluntia.Payment.Gateway.Models.Request;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Response;
 
 namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Interface
@@ -7,5 +8,6 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Interface
     {
         Task<ResponseType<PaymentInitializeResponse>> Initialize(PaymentRequest paymentRequest);
         Task<ResponseType<PaymentVerifyResponse>> VerifyTransaction(string reference);
+        Task<ResponseType<WebhookEventData>> Webhook(string jsonBody, string header, WebhookEventData body);
     }
 }

@@ -7,5 +7,6 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Repository.Interface
        Task<PaymentRequestEntity> GetPaymentRequestById(string paymentRequestId);
        Task<PaymentRequestEntity> GetPaymentRequestByReference(string paymentRequestReference);
        Task<bool> UpdatePaymentRequest(PaymentRequestEntity paymentRequestEntity);
+       Task<bool> UpdatePaymentRequestByReference(string reference);
     }
 }

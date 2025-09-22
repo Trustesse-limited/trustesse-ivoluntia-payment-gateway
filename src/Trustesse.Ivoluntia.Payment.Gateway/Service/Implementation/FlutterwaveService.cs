@@ -1,10 +1,11 @@
 ﻿using Trustesse.Ivoluntia.Payment.Gateway.Models.DTO;
+using Trustesse.Ivoluntia.Payment.Gateway.Models.Request;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Response;
 using Trustesse.Ivoluntia.Payment.Gateway.Service.Interface;
 
 namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
 {
-    public class FlutterwaveService : IPaymentGateway
+    public class FlutterwaveService: IPaymentGateway
     {
         public async Task<ResponseType<PaymentInitializeResponse>> Initialize(PaymentRequest paymentRequest)
         {
@@ -27,6 +28,10 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
             {
                 return ResponseType<PaymentVerifyResponse>.Fail(ex.Message);
             }
+        }
+        public Task<ResponseType<WebhookEventData>> Webhook(string jsonBody, string header, WebhookEventData body)
+        {
+            throw new NotImplementedException();
         }
     }
 }

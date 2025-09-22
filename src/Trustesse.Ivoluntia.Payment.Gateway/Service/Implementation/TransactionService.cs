@@ -21,6 +21,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
         public async Task<ResponseType<PaymentInitializeResponse>> InitializeTransaction(string paymentRequestID)
         {
             var contextResponse = await _paymentRequestRepository.GetPaymentRequestById(paymentRequestID);
+
             if (contextResponse == null)
             {
                 return ResponseType<PaymentInitializeResponse>.Fail("invalid paymentRequestId");
@@ -29,7 +30,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
             string amount = parseAmount.ToString();
             string email = contextResponse.UserEmail;
             var gateway = _paymentGateWayFactory.GetPaymentGateWay(contextResponse.ServiceProvider);
-            var response = await gateway.Initialize(new Models.DTO.PaymentRequest { Amount = amount, Email = email});
+            var response = await gateway.Initialize(new Models.DTO.PaymentRequest { Amount = amount, Email = email });
             try
             {
                 if (response.Succeeded)
