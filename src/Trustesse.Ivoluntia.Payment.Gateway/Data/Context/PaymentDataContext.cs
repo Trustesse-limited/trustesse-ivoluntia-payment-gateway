@@ -26,9 +26,9 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Data.Context
                     DateCreated = DateTime.UtcNow,
                     DateUpdated = DateTime.UtcNow,
                     ServiceProvider = "paystack",
-                    ProgramId = "prog01",
-                    ProgramType = "Scholarship",
-                    ServiceProviderReference = "psrefabc123"
+                    ServiceId = "prog01",
+                    ServicePaidFor = "Scholarship",
+                    Reference = "psrefabc123"
                 },
                 new PaymentRequestEntity
                 {
@@ -40,9 +40,9 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Data.Context
                     DateCreated = DateTime.UtcNow,
                     DateUpdated = DateTime.UtcNow,
                     ServiceProvider = "paystack",
-                    ProgramId = "prog02",
-                    ProgramType = "Donation",
-                    ServiceProviderReference = "fwrefdef456"
+                    ServiceId = "prog02",
+                    ServicePaidFor = "Donation",
+                    Reference = "fwrefdef456"
                 }
             );
         }

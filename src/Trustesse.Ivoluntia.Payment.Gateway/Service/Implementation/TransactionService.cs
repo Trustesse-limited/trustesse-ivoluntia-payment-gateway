@@ -2,7 +2,10 @@
 using Microsoft.Extensions.Configuration;
 using System.Net;
 using Trustesse.Ivoluntia.Payment.Gateway.Data.Context;
+using Trustesse.Ivoluntia.Payment.Gateway.Data.Enums;
+using Trustesse.Ivoluntia.Payment.Gateway.Models;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.DTO;
+using Trustesse.Ivoluntia.Payment.Gateway.Models.Request;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Response;
 using Trustesse.Ivoluntia.Payment.Gateway.Repository.Interface;
 using Trustesse.Ivoluntia.Payment.Gateway.Service.Interface;
@@ -47,9 +50,46 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
             {
                 if (response.Data.Data.Reference != null)
                 {
-                    contextResponse.ServiceProviderReference = response.Data.Data.Reference;
+                    contextResponse.Reference = response.Data.Data.Reference;
                     await _paymentRequestRepository.UpdatePaymentRequest(contextResponse);
                 }
+            }
+        }
+        
+        public async Task<ResponseType<PaymentInitializeResponse>> InitializeTransaction(PaymentInitializeRequest request)
+        {
+            var parseAmount = int.Parse(request.Amount) * 100;
+            string amount = parseAmount.ToString();
+            string email = request.Email;
+            var gateway = _paymentGateWayFactory.GetPaymentGateWay(request.PaymentMethod);
+            var response = await gateway.Initialize(new Models.DTO.PaymentRequest { Amount = amount, Email = email, Reference = request .Reference});
+            try {   
+                if (response.Succeeded)
+                {
+                    PaymentRequestEntity paymentRequestEntity = new PaymentRequestEntity
+                    {
+                        PaymentRequestId = Guid.NewGuid().ToString(),
+                        Initiatorid = request.UserId,
+                        UserEmail = request.Email,
+                        Amount = Convert.ToDecimal(request.Amount),
+                        Status = PaymentStatus.Initiated.ToString(),
+                        DateCreated = DateTime.UtcNow,
+                        ServiceProvider = request.PaymentMethod,
+                        Reference = request.Reference,
+                        ServicePaidFor = request.ServicePaidFor,
+                        ServiceId = request.ServiceId
+                    };
+                    var dbResponse = await _paymentRequestRepository.CreatePaymentRequest(paymentRequestEntity);
+                    if(dbResponse)
+                    {
+                        return ResponseType<PaymentInitializeResponse>.Success(response.Message, response.Data, 200);
+                    }
+                }
+                return ResponseType<PaymentInitializeResponse>.Fail(response.Message);
+            }
+            catch (Exception ex)
+            {
+                return ResponseType<PaymentInitializeResponse>.Fail(ex.Message);
             }
         }
         public async Task<ResponseType<PaymentVerifyResponse>> VerifyTransaction(string reference)

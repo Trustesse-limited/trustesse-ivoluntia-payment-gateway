@@ -56,6 +56,3 @@ nunit-*.xml
 .vs/
 bin/
 obj/
-# Ignore appsettings files
-appsettings.json
-appsettings.Development.json

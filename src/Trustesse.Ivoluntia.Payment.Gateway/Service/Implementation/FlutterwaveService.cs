@@ -7,7 +7,8 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
 {
     public class FlutterwaveService: IPaymentGateway
     {
-        public async Task<ResponseType<PaymentInitializeResponse>> Initialize(PaymentRequest paymentRequest)
+        public async Task<ResponseType<PaymentInitializeResponse>> Initialize(PaymentRequest paymentRequest, string? reference)
+           
         {
             try
             {
@@ -18,6 +19,12 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
                 return ResponseType<PaymentInitializeResponse>.Fail(ex.Message);
             }
         }
+
+        public Task<ResponseType<PaymentInitializeResponse>> Initialize(PaymentRequest paymentRequest)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<ResponseType<PaymentVerifyResponse>> VerifyTransaction(string reference)
         {
             try
