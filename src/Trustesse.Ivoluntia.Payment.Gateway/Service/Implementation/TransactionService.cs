@@ -29,7 +29,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
             {
                 return ResponseType<PaymentInitializeResponse>.Fail("invalid paymentRequestId");
             }
-            var parseAmount = int.Parse(contextResponse.Amount) * 100;
+            var parseAmount = contextResponse.Amount * 100;
             string amount = parseAmount.ToString();
             string email = contextResponse.UserEmail;
             var gateway = _paymentGateWayFactory.GetPaymentGateWay(contextResponse.ServiceProvider);

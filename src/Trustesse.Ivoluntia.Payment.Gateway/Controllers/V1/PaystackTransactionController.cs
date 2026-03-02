@@ -7,6 +7,7 @@ using Newtonsoft.Json.Linq;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Request;
 using System.Text.Json;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Response;
+using System.Security.AccessControl;
 
 namespace Trustesse.Ivoluntia.Payment.Gateway.Controllers.V1
 {
@@ -49,7 +50,12 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Controllers.V1
             {
                 if (response.Succeeded)
                 {
-                    return Ok($"authorizationUrl:{response.Data.Data.AuthorizationUrl}, accesscode:{response.Data.Data.AccessCode}");
+                    return Ok(
+                    new {
+                        authorizationUrl = response.Data.Data.AuthorizationUrl,
+                        accesscode = response.Data.Data.AccessCode,
+                        reference = response.Data.Data.Reference   
+                        });
                 }
                 return BadRequest(response);
             }
@@ -79,6 +85,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Controllers.V1
         }
         [HttpPost("webhook")]
         public async Task<IActionResult> Webhook()
+        
         {
             try
             {

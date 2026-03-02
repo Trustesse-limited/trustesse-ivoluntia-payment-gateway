@@ -1,4 +1,6 @@
-﻿using System.Text.Json;
+﻿using Newtonsoft.Json;
+using System.Text;
+using System.Text.Json;
 using Trustesse.Ivoluntia.Payment.Gateway.Data.Enums;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.DTO;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Request;
@@ -52,10 +54,17 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
                         Status = body.Data.Status,
                         Reference = body.Data.Reference
                     };
-                    //pass the serviceid 
+                    //pass the serviceid, serviceid is the donationid 
                     if (serviceId != null)
                     {
-                        await _client.PostAsJsonAsync("Donation/DonationUpdate", serviceId);
+                        var anony = new
+                        {
+                            Id = serviceId
+                        };
+                        var resp = await _client.PutAsJsonAsync("https://localhost:7155/api/Donation/update", anony);
+                        resp.EnsureSuccessStatusCode();
+                        var result = await resp.Content.ReadAsStringAsync();
+                        Console.WriteLine(result);
                     }
                 }
             }
