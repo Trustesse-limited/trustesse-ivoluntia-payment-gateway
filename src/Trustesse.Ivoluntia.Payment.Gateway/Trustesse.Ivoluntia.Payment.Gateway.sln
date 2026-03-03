@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trustesse.Ivoluntia.Payment.Gateway", "Trustesse.Ivoluntia.Payment.Gateway.csproj", "{646F6BE9-AD45-48E4-8C45-F23DD1042938}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{646F6BE9-AD45-48E4-8C45-F23DD1042938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646F6BE9-AD45-48E4-8C45-F23DD1042938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646F6BE9-AD45-48E4-8C45-F23DD1042938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646F6BE9-AD45-48E4-8C45-F23DD1042938}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9EBB347-BAA0-44F6-8FC9-9D6BEA611DBC}
+	EndGlobalSection
+EndGlobal
