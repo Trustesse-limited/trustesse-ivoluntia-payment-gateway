@@ -12,6 +12,12 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Models.Request
         [JsonPropertyName("email")]
         public string Email { get; set; }
         [JsonPropertyName("callback_url")]
-        public string CallbackUrl { get; set; }
+        public string Callback_Url { get; set; }
+        [JsonPropertyName("reference")]
+        public string?  Reference{ get; set; }
+        public string? ServicePaidFor { get; set; }      
+        public string? ServiceId { get; set; }
+        public string? PaymentMethod { get; set; }  
+        public string? UserId { get; set; }  
     }
 }

@@ -37,7 +37,8 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
             {
                 Amount = paymentRequest.Amount,
                 Email = paymentRequest.Email,
-                CallbackUrl = _callBack
+                Callback_Url = _callBack,
+                Reference = paymentRequest.Reference
             };
             using var response = await _client.PostAsJsonAsync("/transaction/initialize", initializeRequest);
             response.EnsureSuccessStatusCode();

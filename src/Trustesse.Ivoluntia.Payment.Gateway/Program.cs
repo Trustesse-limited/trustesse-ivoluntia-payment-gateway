@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Trustesse.Ivoluntia.Payment.Gateway.Data.Context;
+using Trustesse.Ivoluntia.Payment.Gateway.Extension;
 using Trustesse.Ivoluntia.Payment.Gateway.Repository.Implementation;
 using Trustesse.Ivoluntia.Payment.Gateway.Repository.Interface;
 using Trustesse.Ivoluntia.Payment.Gateway.Service;
@@ -9,11 +10,9 @@ using Trustesse.Ivoluntia.Payment.Gateway.Service.Interface;
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddHttpClient();
-builder.Services.AddHttpContextAccessor();
+builder.Services.AddHttpClient(); 
 builder.Services.AddDbContext<PaymentDataContext>(option =>
-option.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
-ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))));
+option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
@@ -29,6 +28,7 @@ builder.Services.AddScoped<PaystackService>();
 builder.Services.AddScoped<FlutterwaveService>();
 builder.Services.AddScoped<IPaymentGatewayFactory, PaymentGatewayFactory>();
 builder.Services.AddScoped<IPaymentRequestRepository, PaymentRequestRepository>();
+ServiceConfig.AddCustomCors(builder.Services, builder.Configuration);
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
@@ -39,7 +39,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 app.UseSession();
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();

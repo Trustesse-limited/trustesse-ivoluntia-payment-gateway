@@ -1,4 +1,8 @@
-﻿using System.Text.Json;
+﻿using Newtonsoft.Json;
+using System.Text;
+using System.Text.Json;
+using Trustesse.Ivoluntia.Payment.Gateway.Data.Enums;
+using Trustesse.Ivoluntia.Payment.Gateway.Models.DTO;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Request;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Response;
 using Trustesse.Ivoluntia.Payment.Gateway.Repository.Interface;
@@ -6,37 +10,63 @@ using Trustesse.Ivoluntia.Payment.Gateway.Service.Interface;
 
 namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
 {
-    public class WebhookService:IWebhookService
+    public class WebhookService : IWebhookService
     {
         private readonly IVerifyWebhookEvent _verifyWebhookEvent;
         private readonly IPaymentRequestRepository _paymentRequestRepository;
-        public WebhookService(IVerifyWebhookEvent verifyWebhookEvent, IPaymentRequestRepository paymentRequestRepository)
+        private readonly IConfiguration _configuration;
+        private readonly HttpClient _client;
+        private readonly string? _baseUrl;
+        public WebhookService(IVerifyWebhookEvent verifyWebhookEvent, IPaymentRequestRepository paymentRequestRepository, IConfiguration configuration, HttpClient client)
         {
             _verifyWebhookEvent = verifyWebhookEvent;
             _paymentRequestRepository = paymentRequestRepository;
+            _configuration = configuration;
+            _client = client;
+            _baseUrl = _configuration["Donation:BaseUrl"];
+            _client = new HttpClient
+            {
+                BaseAddress = new Uri(_baseUrl)
+            };
         }
         public async Task<ResponseType<WebhookEventData>> Webhook(string jsonBody, string header, WebhookEventData body)
         {
             var response = _verifyWebhookEvent.Verify(jsonBody, header);
             try
             {
-                if(response)
+                if (response)
                 {
                     return ResponseType<WebhookEventData>.Success("verify", body, 200);
                 }
                 return ResponseType<WebhookEventData>.Fail("unverify event");
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 return ResponseType<WebhookEventData>.Fail(ex.Message);
             }
-            finally 
+            finally
             {
-                if (response)
+                if (response & body.Data.Status == PaystackWebhookDataStatus.success.ToString())
                 {
-                    await _paymentRequestRepository.UpdatePaymentRequestByReference(body.Data.Reference);
+                    string serviceId = await _paymentRequestRepository.UpdatePaymentRequestByReference(body.Data.Reference);
+                    UpdateDonationDto updateDonationDto = new UpdateDonationDto
+                    {
+                        Status = body.Data.Status,
+                        Reference = body.Data.Reference
+                    };
+                    //pass the serviceid, serviceid is the donationid 
+                    if (serviceId != null)
+                    {
+                        var anony = new
+                        {
+                            Id = serviceId
+                        };
+                        var resp = await _client.PutAsJsonAsync("https://localhost:7155/api/Donation/update", anony);
+                        resp.EnsureSuccessStatusCode();
+                        var result = await resp.Content.ReadAsStringAsync();
+                        Console.WriteLine(result);
+                    }
                 }
-                //Todo : send webhook event to donor thank you endpoint
             }
         }
     }

@@ -21,28 +21,28 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Data.Context
                     PaymentRequestId = "pay001",
                     Initiatorid = "user101",
                     UserEmail = "testuser1@example.com",
-                    Amount = "5000",
+                    Amount = 5000,
                     Status = "initialize",
                     DateCreated = DateTime.UtcNow,
                     DateUpdated = DateTime.UtcNow,
                     ServiceProvider = "paystack",
-                    ProgramId = "prog01",
-                    ProgramType = "Scholarship",
-                    ServiceProviderReference = "psrefabc123"
+                    ServiceId = "prog01",
+                    ServicePaidFor = "Scholarship",
+                    Reference = "psrefabc123"
                 },
                 new PaymentRequestEntity
                 {
                     PaymentRequestId = "pay002",
                     Initiatorid = "user102",
                     UserEmail = "testuser2@example.com",
-                    Amount = "7500",
+                    Amount = 7500,
                     Status = "initialize",
                     DateCreated = DateTime.UtcNow,
                     DateUpdated = DateTime.UtcNow,
                     ServiceProvider = "paystack",
-                    ProgramId = "prog02",
-                    ProgramType = "Donation",
-                    ServiceProviderReference = "fwrefdef456"
+                    ServiceId = "prog02",
+                    ServicePaidFor = "Donation",
+                    Reference = "fwrefdef456"
                 }
             );
         }

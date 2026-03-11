@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Trustesse.Ivoluntia.Payment.Gateway.Data.Context;
 
@@ -17,50 +18,51 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "8.0.0")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("Trustesse.Ivoluntia.Payment.Gateway.Models.PaymentRequestEntity", b =>
                 {
                     b.Property<string>("PaymentRequestId")
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Amount")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DateUpdated")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Initiatorid")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ProgramId")
+                    b.Property<string>("Reference")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ProgramType")
+                    b.Property<string>("ServiceId")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ServicePaidFor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ServiceProvider")
                         .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ServiceProviderReference")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserEmail")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PaymentRequestId");
 
@@ -70,28 +72,28 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Migrations
                         new
                         {
                             PaymentRequestId = "pay001",
-                            Amount = "5000",
-                            DateCreated = new DateTime(2025, 8, 22, 23, 35, 4, 327, DateTimeKind.Utc).AddTicks(5854),
-                            DateUpdated = new DateTime(2025, 8, 22, 23, 35, 4, 327, DateTimeKind.Utc).AddTicks(5856),
+                            Amount = 5000m,
+                            DateCreated = new DateTime(2026, 2, 27, 17, 40, 4, 7, DateTimeKind.Utc).AddTicks(9626),
+                            DateUpdated = new DateTime(2026, 2, 27, 17, 40, 4, 7, DateTimeKind.Utc).AddTicks(9626),
                             Initiatorid = "user101",
-                            ProgramId = "prog01",
-                            ProgramType = "Scholarship",
-                            ServiceProvider = "Paystack",
-                            ServiceProviderReference = "psrefabc123",
+                            Reference = "psrefabc123",
+                            ServiceId = "prog01",
+                            ServicePaidFor = "Scholarship",
+                            ServiceProvider = "paystack",
                             Status = "initialize",
                             UserEmail = "testuser1@example.com"
                         },
                         new
                         {
                             PaymentRequestId = "pay002",
-                            Amount = "7500",
-                            DateCreated = new DateTime(2025, 8, 22, 23, 35, 4, 327, DateTimeKind.Utc).AddTicks(5859),
-                            DateUpdated = new DateTime(2025, 8, 22, 23, 35, 4, 327, DateTimeKind.Utc).AddTicks(5860),
+                            Amount = 7500m,
+                            DateCreated = new DateTime(2026, 2, 27, 17, 40, 4, 7, DateTimeKind.Utc).AddTicks(9630),
+                            DateUpdated = new DateTime(2026, 2, 27, 17, 40, 4, 7, DateTimeKind.Utc).AddTicks(9631),
                             Initiatorid = "user102",
-                            ProgramId = "prog02",
-                            ProgramType = "Donation",
-                            ServiceProvider = "Paystack",
-                            ServiceProviderReference = "fwrefdef456",
+                            Reference = "fwrefdef456",
+                            ServiceId = "prog02",
+                            ServicePaidFor = "Donation",
+                            ServiceProvider = "paystack",
                             Status = "initialize",
                             UserEmail = "testuser2@example.com"
                         });
