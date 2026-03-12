@@ -3,6 +3,6 @@
     public enum PaymentServiceProvider
     {
         FlutterWave,
-        Paystack
+        Paystack,
     }
 }

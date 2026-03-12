@@ -6,6 +6,8 @@ using System.Text;
 using Newtonsoft.Json.Linq;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Request;
 using System.Text.Json;
+using Trustesse.Ivoluntia.Payment.Gateway.Models.Response;
+using System.Security.AccessControl;
 
 namespace Trustesse.Ivoluntia.Payment.Gateway.Controllers.V1
 {
@@ -40,6 +42,29 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Controllers.V1
                 return BadRequest(ex.Message);
             }
         }
+        [HttpPost("DonationPayment")]
+        public async Task<IActionResult> DonationPayment([FromBody]PaymentInitializeRequest request)
+        {
+            var response = await _service.InitializeTransaction(request);
+            try
+            {
+                if (response.Succeeded)
+                {
+                    return Ok(
+                    new {
+                        authorizationUrl = response.Data.Data.AuthorizationUrl,
+                        accesscode = response.Data.Data.AccessCode,
+                        reference = response.Data.Data.Reference   
+                        });
+                }
+                return BadRequest(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return BadRequest(ex.Message);
+            }
+        }
         [HttpGet("verify")]
         public async Task<IActionResult> Verify(string reference)
         {
@@ -60,6 +85,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Controllers.V1
         }
         [HttpPost("webhook")]
         public async Task<IActionResult> Webhook()
+        
         {
             try
             {
