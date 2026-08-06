@@ -96,18 +96,39 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Controllers.V1
                 }
                 Response.StatusCode = StatusCodes.Status200OK;
                 var header = Request.Headers["x-paystack-signature"].FirstOrDefault();
-                var body = JsonSerializer.Deserialize<WebhookEventData>(jsonBody);
+                if (string.IsNullOrEmpty(header))
+                {
+                    return Ok(); 
+                }
+                WebhookEventData? body = null;
+                try
+                {
+                    body = JsonSerializer.Deserialize<WebhookEventData>(jsonBody);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError($"Deserialization Error: {ex.Message}");
+                    return Ok();
+                }
+                if (body == null)
+                {
+                    return Ok();
+                }
                 var response = await _iwebhookService.Webhook(jsonBody, header, body);
+                if (!response.Succeeded)
+                {
+                    return Ok();
+                }
                 if (response.Succeeded)
                 {
-                    return Ok(response.StatusCode);
+                    return Ok();
                 }
-                return BadRequest(response);
+                return Ok();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message);
-                return BadRequest(ex.Message);
+                _logger.LogError($"webhook error {ex.Message}");
+                return Ok();
             }
         }
     }

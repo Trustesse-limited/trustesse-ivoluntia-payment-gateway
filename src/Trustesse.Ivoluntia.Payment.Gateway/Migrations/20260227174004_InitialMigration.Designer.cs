@@ -11,7 +11,7 @@ using Trustesse.Ivoluntia.Payment.Gateway.Data.Context;
 
 namespace Trustesse.Ivoluntia.Payment.Gateway.Migrations
 {
-    [DbContext(typeof(PaymentDataContext))]
+    [DbContext(typeof(iVoluntiaDataContext))]
     [Migration("20260227174004_InitialMigration")]
     partial class InitialMigration
     {

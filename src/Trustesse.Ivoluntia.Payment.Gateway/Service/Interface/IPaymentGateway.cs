@@ -1,4 +1,4 @@
-﻿using Trustesse.Ivoluntia.Payment.Gateway.Models.DTO;
+﻿using Trustesse.Ivoluntia.Payment.Gateway.Dto.PaymentDto;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Request;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Response;
 

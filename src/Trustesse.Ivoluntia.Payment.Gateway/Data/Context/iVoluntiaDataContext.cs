@@ -1,13 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Reflection.Emit;
-using Trustesse.Ivoluntia.Payment.Gateway.Models;
+using Trustesse.Ivoluntia.Payment.Gateway.Models.Entity;
+using static System.Net.WebRequestMethods;
 
 namespace Trustesse.Ivoluntia.Payment.Gateway.Data.Context
 {
-    public class PaymentDataContext : DbContext
+    public class iVoluntiaDataContext : DbContext
     {
-        public PaymentDataContext(DbContextOptions<PaymentDataContext> Options) : base(Options)
+        public iVoluntiaDataContext(DbContextOptions<iVoluntiaDataContext> Options) : base(Options)
         {
         }
         public DbSet<PaymentRequestEntity> PaymentRequests { get; set; }
@@ -18,7 +19,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Data.Context
             (
                 new PaymentRequestEntity
                 {
-                    PaymentRequestId = "pay001",
+                    Id = "pay001",
                     Initiatorid = "user101",
                     UserEmail = "testuser1@example.com",
                     Amount = 5000,
@@ -32,7 +33,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Data.Context
                 },
                 new PaymentRequestEntity
                 {
-                    PaymentRequestId = "pay002",
+                    Id = "pay002",
                     Initiatorid = "user102",
                     UserEmail = "testuser2@example.com",
                     Amount = 7500,

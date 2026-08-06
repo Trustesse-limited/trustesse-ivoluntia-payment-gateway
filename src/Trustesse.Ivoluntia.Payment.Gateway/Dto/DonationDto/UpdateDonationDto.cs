@@ -1,4 +1,4 @@
-﻿namespace Trustesse.Ivoluntia.Payment.Gateway.Models.DTO
+﻿namespace Trustesse.Ivoluntia.Payment.Gateway.Dto.DonationDto
 {
     public class UpdateDonationDto
     {

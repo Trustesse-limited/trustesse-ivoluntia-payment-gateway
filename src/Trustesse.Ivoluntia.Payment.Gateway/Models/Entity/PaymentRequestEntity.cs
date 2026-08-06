@@ -1,12 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Trustesse.Ivoluntia.Payment.Gateway.Models
+namespace Trustesse.Ivoluntia.Payment.Gateway.Models.Entity
 {
-    public class PaymentRequestEntity
+    public class PaymentRequestEntity: BaseEntity
     {
-        [Key]
-        public string PaymentRequestId { get; set; }
         public string Initiatorid { get; set; }
         public string UserEmail { get; set; }
         [Column(TypeName = "decimal(18,2)")]
@@ -16,7 +14,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Models
         public DateTime DateUpdated { get; set; }
         public string ServiceProvider { get; set; }
         public string Reference { get; set; }
-        public string ServicePaidFor { get; set; }  
-        public string ServiceId { get; set; }   
+        public string ServicePaidFor { get; set; }
+        public string ServiceId { get; set; }
     }
 }

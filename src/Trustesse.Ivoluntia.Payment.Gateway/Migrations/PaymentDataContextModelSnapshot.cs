@@ -10,7 +10,7 @@ using Trustesse.Ivoluntia.Payment.Gateway.Data.Context;
 
 namespace Trustesse.Ivoluntia.Payment.Gateway.Migrations
 {
-    [DbContext(typeof(PaymentDataContext))]
+    [DbContext(typeof(iVoluntiaDataContext))]
     partial class PaymentDataContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -22,13 +22,16 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Trustesse.Ivoluntia.Payment.Gateway.Models.PaymentRequestEntity", b =>
+            modelBuilder.Entity("Trustesse.Ivoluntia.Payment.Gateway.Models.Entity.PaymentRequestEntity", b =>
                 {
-                    b.Property<string>("PaymentRequestId")
+                    b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -39,6 +42,9 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Migrations
                     b.Property<string>("Initiatorid")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeprecated")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Reference")
                         .IsRequired()
@@ -64,18 +70,19 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("PaymentRequestId");
+                    b.HasKey("Id");
 
                     b.ToTable("PaymentRequests");
 
                     b.HasData(
                         new
                         {
-                            PaymentRequestId = "pay001",
+                            Id = "pay001",
                             Amount = 5000m,
-                            DateCreated = new DateTime(2026, 2, 27, 17, 40, 4, 7, DateTimeKind.Utc).AddTicks(9626),
-                            DateUpdated = new DateTime(2026, 2, 27, 17, 40, 4, 7, DateTimeKind.Utc).AddTicks(9626),
+                            DateCreated = new DateTime(2026, 8, 3, 20, 19, 46, 113, DateTimeKind.Utc).AddTicks(1256),
+                            DateUpdated = new DateTime(2026, 8, 3, 20, 19, 46, 113, DateTimeKind.Utc).AddTicks(1257),
                             Initiatorid = "user101",
+                            IsDeprecated = false,
                             Reference = "psrefabc123",
                             ServiceId = "prog01",
                             ServicePaidFor = "Scholarship",
@@ -85,11 +92,12 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Migrations
                         },
                         new
                         {
-                            PaymentRequestId = "pay002",
+                            Id = "pay002",
                             Amount = 7500m,
-                            DateCreated = new DateTime(2026, 2, 27, 17, 40, 4, 7, DateTimeKind.Utc).AddTicks(9630),
-                            DateUpdated = new DateTime(2026, 2, 27, 17, 40, 4, 7, DateTimeKind.Utc).AddTicks(9631),
+                            DateCreated = new DateTime(2026, 8, 3, 20, 19, 46, 113, DateTimeKind.Utc).AddTicks(1264),
+                            DateUpdated = new DateTime(2026, 8, 3, 20, 19, 46, 113, DateTimeKind.Utc).AddTicks(1265),
                             Initiatorid = "user102",
+                            IsDeprecated = false,
                             Reference = "fwrefdef456",
                             ServiceId = "prog02",
                             ServicePaidFor = "Donation",

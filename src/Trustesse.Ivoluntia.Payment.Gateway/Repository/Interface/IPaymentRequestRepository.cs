@@ -1,4 +1,4 @@
-﻿using Trustesse.Ivoluntia.Payment.Gateway.Models;
+﻿using Trustesse.Ivoluntia.Payment.Gateway.Models.Entity;
 
 namespace Trustesse.Ivoluntia.Payment.Gateway.Repository.Interface
 {
