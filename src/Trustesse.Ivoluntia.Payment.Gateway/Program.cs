@@ -11,9 +11,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient(); 
-builder.Services.AddDbContext<PaymentDataContext>(option =>
-option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddDistributedMemoryCache();
+
+//builder.Services.AddDistributedMemoryCache();
+builder.Services.AddMemoryCache(options =>
+{
+    options.SizeLimit = 1000;
+}
+    );
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -21,14 +25,11 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 builder.Services.AddLogging();
-builder.Services.AddScoped<IVerifyWebhookEvent, VerifyWebhookEvent>();
-builder.Services.AddScoped<IWebhookService, WebhookService>();
-builder.Services.AddScoped<ITransactionService, TransactionService>();
-builder.Services.AddScoped<PaystackService>();
-builder.Services.AddScoped<FlutterwaveService>();
-builder.Services.AddScoped<IPaymentGatewayFactory, PaymentGatewayFactory>();
-builder.Services.AddScoped<IPaymentRequestRepository, PaymentRequestRepository>();
+
 ServiceConfig.AddCustomCors(builder.Services, builder.Configuration);
+ServiceConfig.AddCustomServices(builder.Services);
+ServiceConfig.AddCustomDatabase(builder.Services, builder.Configuration);
+ServiceConfig.AddRateLimt(builder.Services);
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
@@ -39,11 +40,18 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 app.UseSession();
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+app.UseRateLimiter();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.Run();

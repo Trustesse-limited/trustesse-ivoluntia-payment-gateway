@@ -2,7 +2,6 @@
 using System.Text;
 using System.Text.Json;
 using Trustesse.Ivoluntia.Payment.Gateway.Data.Enums;
-using Trustesse.Ivoluntia.Payment.Gateway.Models.DTO;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Request;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Response;
 using Trustesse.Ivoluntia.Payment.Gateway.Repository.Interface;
@@ -32,8 +31,26 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
         public async Task<ResponseType<WebhookEventData>> Webhook(string jsonBody, string header, WebhookEventData body)
         {
             var response = _verifyWebhookEvent.Verify(jsonBody, header);
+            if(!response)
+            {
+                return ResponseType<WebhookEventData>.Fail("unverify");
+            }
             try
             {
+                if (body?.Data?.Status == "success")
+                {
+                    string serviceId = await _paymentRequestRepository.UpdatePaymentRequestByReference(body.Data.Reference);
+
+                    if (!string.IsNullOrEmpty(serviceId))
+                    {
+                        var payload = new { Id = serviceId };
+                        var resp = await _client.PutAsJsonAsync(
+                            $"{_baseUrl}/api/Donation/update",
+                            payload
+                        );
+                        resp.EnsureSuccessStatusCode();
+                    }
+                }
                 if (response)
                 {
                     return ResponseType<WebhookEventData>.Success("verify", body, 200);
@@ -43,30 +60,6 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
             catch (Exception ex)
             {
                 return ResponseType<WebhookEventData>.Fail(ex.Message);
-            }
-            finally
-            {
-                if (response & body.Data.Status == PaystackWebhookDataStatus.success.ToString())
-                {
-                    string serviceId = await _paymentRequestRepository.UpdatePaymentRequestByReference(body.Data.Reference);
-                    UpdateDonationDto updateDonationDto = new UpdateDonationDto
-                    {
-                        Status = body.Data.Status,
-                        Reference = body.Data.Reference
-                    };
-                    //pass the serviceid, serviceid is the donationid 
-                    if (serviceId != null)
-                    {
-                        var anony = new
-                        {
-                            Id = serviceId
-                        };
-                        var resp = await _client.PutAsJsonAsync("https://localhost:7155/api/Donation/update", anony);
-                        resp.EnsureSuccessStatusCode();
-                        var result = await resp.Content.ReadAsStringAsync();
-                        Console.WriteLine(result);
-                    }
-                }
             }
         }
     }

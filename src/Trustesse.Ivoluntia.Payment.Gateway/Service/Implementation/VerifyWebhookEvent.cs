@@ -17,16 +17,10 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
         }
         public bool Verify(string jsonBody, string header)
         {
-            string jsonInput = jsonBody;
-            string? inputString = Convert.ToString(new JValue(jsonInput));
-            string result = "";
-            byte[] secretkeyBytes = Encoding.UTF8.GetBytes(_apiKey);
-            byte[] inputBytes = Encoding.UTF8.GetBytes(inputString);
-            using (var hmac = new HMACSHA512(secretkeyBytes))
-            {
-                byte[] hashValue = hmac.ComputeHash(inputBytes);
-                result = BitConverter.ToString(hashValue).Replace("-", string.Empty); ;
-            }
+            var secretkeyBytes = Encoding.UTF8.GetBytes(_apiKey);
+            using var hmac = new HMACSHA512(secretkeyBytes);
+            var hashValue = hmac.ComputeHash(Encoding.UTF8.GetBytes(jsonBody));
+            var result = BitConverter.ToString(hashValue).Replace("-", string.Empty);
             string xpaystackSignature = header;
 
                 if (result.ToLower().Equals(xpaystackSignature))

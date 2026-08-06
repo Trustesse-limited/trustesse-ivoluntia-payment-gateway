@@ -3,8 +3,9 @@ using Microsoft.Extensions.Configuration;
 using System.Net;
 using Trustesse.Ivoluntia.Payment.Gateway.Data.Context;
 using Trustesse.Ivoluntia.Payment.Gateway.Data.Enums;
-using Trustesse.Ivoluntia.Payment.Gateway.Models;
-using Trustesse.Ivoluntia.Payment.Gateway.Models.DTO;
+using Trustesse.Ivoluntia.Payment.Gateway.Dto.PaymentDto;
+using Trustesse.Ivoluntia.Payment.Gateway.Helper;
+using Trustesse.Ivoluntia.Payment.Gateway.Models.Entity;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Request;
 using Trustesse.Ivoluntia.Payment.Gateway.Models.Response;
 using Trustesse.Ivoluntia.Payment.Gateway.Repository.Interface;
@@ -33,7 +34,7 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
             string amount = parseAmount.ToString();
             string email = contextResponse.UserEmail;
             var gateway = _paymentGateWayFactory.GetPaymentGateWay(contextResponse.ServiceProvider);
-            var response = await gateway.Initialize(new Models.DTO.PaymentRequest { Amount = amount, Email = email });
+            var response = await gateway.Initialize(PaymentRequestHelper.BuildPaymentRequest(email, amount, contextResponse.Reference));
             try
             {
                 if (response.Succeeded)
@@ -62,13 +63,13 @@ namespace Trustesse.Ivoluntia.Payment.Gateway.Service.Implementation
             string amount = parseAmount.ToString();
             string email = request.Email;
             var gateway = _paymentGateWayFactory.GetPaymentGateWay(request.PaymentMethod);
-            var response = await gateway.Initialize(new Models.DTO.PaymentRequest { Amount = amount, Email = email, Reference = request .Reference});
+            var response = await gateway.Initialize(PaymentRequestHelper.BuildPaymentRequest(email, amount, request.Reference));
             try {   
                 if (response.Succeeded)
                 {
                     PaymentRequestEntity paymentRequestEntity = new PaymentRequestEntity
                     {
-                        PaymentRequestId = Guid.NewGuid().ToString(),
+                        Id = Guid.NewGuid().ToString(),
                         Initiatorid = request.UserId,
                         UserEmail = request.Email,
                         Amount = Convert.ToDecimal(request.Amount),
